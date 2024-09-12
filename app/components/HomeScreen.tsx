@@ -1,20 +1,15 @@
 // PaginaInicioCurriculumSSR.tsx
-import {
-  Card,
-  CardHeader,
-  CardContent,
-  CardFooter,
-} from "@/components/ui/card";
-import { Label } from "@/components/ui/label";
+import { Card, CardHeader, CardContent } from "@/components/ui/card";
 import { TrendingUp, Award, Zap } from "lucide-react";
-import FormularioCurriculum from "./FormularioCurriculum";
+import { LucideIcon } from "lucide-react";
+import FormularioCurriculum from "@/app/components/FormularioCurriculum";
 
 const TarjetaCaracteristica = ({
   icon: Icon,
   titulo,
   descripcion,
 }: {
-  icon: any;
+  icon: LucideIcon;
   titulo: string;
   descripcion: string;
 }) => (
