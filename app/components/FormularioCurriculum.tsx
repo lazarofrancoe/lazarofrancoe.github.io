@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import { FileText } from "lucide-react";
 
@@ -56,7 +57,75 @@ export default function FormularioCurriculum() {
           className="mt-1 bg-gray-700 border-gray-600 text-white"
         />
       </div>
-      {/* Repeat for other form fields */}
+      <div>
+        <Label htmlFor="email" className="text-gray-300">
+          Correo Electrónico
+        </Label>
+        <Input
+          id="email"
+          name="email"
+          type="email"
+          value={formData.email}
+          onChange={handleChange}
+          required
+          className="mt-1 bg-gray-700 border-gray-600 text-white"
+        />
+      </div>
+      <div>
+        <Label htmlFor="telefono" className="text-gray-300">
+          Teléfono
+        </Label>
+        <Input
+          id="telefono"
+          name="telefono"
+          type="tel"
+          value={formData.telefono}
+          onChange={handleChange}
+          required
+          className="mt-1 bg-gray-700 border-gray-600 text-white"
+        />
+      </div>
+      <div>
+        <Label htmlFor="puestoActual" className="text-gray-300">
+          Puesto Actual/Deseado
+        </Label>
+        <Input
+          id="puestoActual"
+          name="puestoActual"
+          value={formData.puestoActual}
+          onChange={handleChange}
+          required
+          className="mt-1 bg-gray-700 border-gray-600 text-white"
+        />
+      </div>
+      <div className="md:col-span-2">
+        <Label htmlFor="experiencia" className="text-gray-300">
+          Experiencia Laboral
+        </Label>
+        <Textarea
+          id="experiencia"
+          name="experiencia"
+          value={formData.experiencia}
+          onChange={handleChange}
+          required
+          className="mt-1 bg-gray-700 border-gray-600 text-white"
+          rows={4}
+        />
+      </div>
+      <div className="md:col-span-2">
+        <Label htmlFor="habilidades" className="text-gray-300">
+          Habilidades Clave
+        </Label>
+        <Textarea
+          id="habilidades"
+          name="habilidades"
+          value={formData.habilidades}
+          onChange={handleChange}
+          required
+          className="mt-1 bg-gray-700 border-gray-600 text-white"
+          rows={3}
+        />
+      </div>
       <div className="md:col-span-2">
         <Button
           type="submit"
